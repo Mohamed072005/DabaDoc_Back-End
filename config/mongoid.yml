@@ -1,0 +1,28 @@
+development:
+  clients:
+    default:
+      database: dabadoc_test_development
+      hosts:
+        - localhost:27017
+      options:
+        server_selection_timeout: 5
+
+test:
+  clients:
+    default:
+      database: dabadoc_test_test
+      hosts:
+        - localhost:27017
+      options:
+        server_selection_timeout: 5
+
+production:
+  clients:
+    default:
+      database: dabadoc_test_production
+      hosts:
+        - <%= ENV['MONGO_HOST'] || 'localhost:27017' %>
+      options:
+        user: <%= ENV['MONGO_USER'] %>
+        password: <%= ENV['MONGO_PASSWORD'] %>
+        auth_source: admin
