@@ -2,7 +2,7 @@ class AuthController < ApplicationController
   skip_before_action :authenticate_request
 
   def login
-    result = Auth::AuthService.authenticate(login_params)
+    result = AuthService.authenticate(login_params)
 
     if result.success?
       render json: { token: result.data }, status: :ok
@@ -12,7 +12,7 @@ class AuthController < ApplicationController
   end
 
   def register
-    result = Auth::AuthService.register(registration_params)
+    result = AuthService.register(registration_params)
 
     if result.success?
       render json: { message: 'Registration successful' }, status: :created

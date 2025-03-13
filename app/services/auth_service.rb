@@ -1,4 +1,3 @@
-module Auth
   class AuthService
     def self.register(params)
       # Validate required parameters
@@ -64,4 +63,3 @@ module Auth
       end
     end
   end
-end

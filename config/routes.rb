@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   post 'auth/login', to: 'auth#login'
   post 'auth/register', to: 'auth#register'
 
+  # Question routes
+  post 'question/create', to: 'question#create_question'
+
   # Defines the root path route ("/")
   # root "posts#index"
 end
