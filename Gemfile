@@ -29,6 +29,9 @@ gem 'jwt'
 # hash password strategy
 gem 'bcrypt', '~> 3.1.20'
 
+# For cors
+gem 'rack-cors'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 

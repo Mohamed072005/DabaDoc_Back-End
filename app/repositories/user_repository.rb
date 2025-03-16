@@ -1,7 +1,7 @@
   class UserRepository
-    def self.find_by_email(userEmail)
-      user = User.where(email: userEmail).first
-      raise Mongoid::Errors::DocumentNotFound.new(User, {email: userEmail}) unless user
+    def self.find_by_email(user_email)
+      user = User.where(email: user_email).first
+      raise Mongoid::Errors::DocumentNotFound.new(User, {email: user_email}) unless user
       user
     end
 

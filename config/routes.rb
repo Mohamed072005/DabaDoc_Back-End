@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   # Question routes
   post 'question/create', to: 'question#create_question'
-
+  get 'question/get/questions', to: 'question#get_questions'
   # Defines the root path route ("/")
   # root "posts#index"
 end

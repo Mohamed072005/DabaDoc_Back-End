@@ -5,7 +5,7 @@ class AuthController < ApplicationController
     result = AuthService.authenticate(login_params)
 
     if result.success?
-      render json: { token: result.data }, status: :ok
+        render json: { data: result.data }, status: :ok
     else
       render json: { error: result.error }, status: result.status
     end

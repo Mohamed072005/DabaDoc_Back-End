@@ -8,6 +8,7 @@ class Question
 
   belongs_to :user
   has_many :answers
+  has_many :likes
 
   validates :title, :content, :location, presence: true
 end

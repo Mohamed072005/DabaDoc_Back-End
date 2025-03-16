@@ -48,7 +48,7 @@
         # Authenticate user
         if user&.authenticate(params[:password])
           token = JwtService.encode(user_id: user.id)
-          return ServiceResult.success(token)
+          return ServiceResult.success({ token: token, user: { email: user.email, user_id: user.id } })
         else
           return ServiceResult.error('Invalid email or password', :unauthorized)
         end
