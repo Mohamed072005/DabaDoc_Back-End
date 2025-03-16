@@ -21,7 +21,7 @@ gem "jbuilder"
 # gem "bcrypt", "~> 3.1.7"
 
 # Use for mongoDB
-gem 'mongoid', '~> 8.0'
+gem 'mongoid', '~> 9.0'
 
 # jwt strategy
 gem 'jwt'
