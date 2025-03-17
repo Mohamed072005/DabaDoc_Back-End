@@ -4,7 +4,7 @@ class Question
 
   field :title, type: String
   field :content, type: String
-  field :location, type: Array
+  field :location, type: Hash
 
   belongs_to :user
   has_many :answers

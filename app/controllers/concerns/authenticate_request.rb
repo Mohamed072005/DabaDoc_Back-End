@@ -19,7 +19,9 @@ module AuthenticateRequest
 
     begin
       decoded = JwtService.decode(token)
-      @current_user = User.find_by(_id: decoded['user_id'])
+      Rails.logger.debug "Decoded token: #{decoded.inspect}"
+      user_id = decoded[:user_id] || decoded['user_id']
+      @current_user = UserRepository.find_by_id(user_id)
 
       unless @current_user
         render json: { error: 'User not found' }, status: :unauthorized
